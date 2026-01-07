@@ -2,7 +2,7 @@
     "navigationFallback": {
         "rewrite": "/index.html"
     },
-    "routes" : [
+    "routessss" : [
         {
             "route": "/*",
             "allowedRoles": ["authenticated"]
