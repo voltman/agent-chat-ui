@@ -1,8 +1,8 @@
 {
-    "navigationFallbackkk": {
+    "navigationFallback": {
         "rewrite": "/index.html"
     },
-    "routessss" : [
+    "routes" : [
         {
             "route": "/*",
             "allowedRoles": ["authenticated"]
