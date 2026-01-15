@@ -40,7 +40,7 @@ jobs:
       pnpm install
       pnpm build
 
-   - name: Zip artifact for deployment
+   - name: Zip nest/standalone folder to artifact for deployment
      run: |
       cd .next/standalone
       zip -r -y ../../next.zip . --symlinks
@@ -71,8 +71,8 @@ jobs:
 
    - name: Unzip artifact for deployment
      run: |
-      mkdir .next/standalone
-      unzip next.zip -d .next/standalone
+      unzip next.zip -d .next
+      cp -R .next/static/ .next/standalone/.next/server/`
 
    - name: Login to Azure
      uses: azure/login@v2
