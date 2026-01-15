@@ -69,10 +69,10 @@ jobs:
      with:
       name: node-app
 
-   - name: Unzip artifact for deployment
-     run: |
-      unzip -o next.zip
-      cp -R .next/static/ .next/standalone/.next/server/`
+  #  - name: Unzip artifact for deployment
+  #    run: |
+  #     unzip -o next.zip
+  #     cp -R .next/static/ .next/standalone/.next/server/`
 
    - name: Login to Azure
      uses: azure/login@v2
