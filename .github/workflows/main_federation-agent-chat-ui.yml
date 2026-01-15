@@ -71,7 +71,7 @@ jobs:
 
    - name: Unzip artifact for deployment
      run: |
-      unzip next.zip -d .next
+      unzip next.zip
       cp -R .next/static/ .next/standalone/.next/server/`
 
    - name: Login to Azure
