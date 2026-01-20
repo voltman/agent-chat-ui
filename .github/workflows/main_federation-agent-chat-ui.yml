@@ -42,11 +42,12 @@ jobs:
 
    - name: Zip nest/standalone folder to artifact for deployment
      run: |
-      cd .next/standalone
+      cd .next
       zip -r -y ../../next.zip . --symlinks
-      cd ..
-      zip -r -y ../next_static.zip .
       cd -
+
+  # cd ..
+   # zip -r -y ../next_static.zip .
 
    - name: Upload artifact for deployment job
      uses: actions/upload-artifact@v4
@@ -73,11 +74,12 @@ jobs:
 
    - name: Unzip artifact for deployment
      run: |
-      mkdir -p .next/standalone
-      unzip -o next.zip .next/standalone
-      mkdir -p .next/standalone/.next/server/static'
-      unzip -o next_static.zip .next/standalone/.next/server/static
-    # cp -R .next/static/ .next/standalone/.next/server/`
+      mkdir -p .next
+      unzip next.zip -d .next
+      cp -R .next/static/ .next/standalone/.next/server/`
+    #  mkdir -p .next/standalone/.next/server/static'
+    #  unzip -o next_static.zip .next/standalone/.next/server/static
+    # 
 
    - name: Login to Azure
      uses: azure/login@v2
