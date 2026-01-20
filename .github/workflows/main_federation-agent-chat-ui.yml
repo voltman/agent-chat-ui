@@ -44,6 +44,8 @@ jobs:
      run: |
       cd .next/standalone
       zip -r -y ../../next.zip . --symlinks
+      cd ..
+      zip -r -y ../next_static.zip .
       cd -
 
    - name: Upload artifact for deployment job
@@ -69,10 +71,13 @@ jobs:
      with:
       name: node-app
 
-  #  - name: Unzip artifact for deployment
-  #    run: |
-  #     unzip -o next.zip
-  #     cp -R .next/static/ .next/standalone/.next/server/`
+   - name: Unzip artifact for deployment
+     run: |
+      mkdir -p .next/standalone
+      unzip -o next.zip .next/standalone
+      mkdir -p .next/standalone/.next/server/static'
+      unzip -o next_static.zip .next/standalone/.next/server/static
+    # cp -R .next/static/ .next/standalone/.next/server/`
 
    - name: Login to Azure
      uses: azure/login@v2
