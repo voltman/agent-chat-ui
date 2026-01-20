@@ -76,7 +76,9 @@ jobs:
      run: |
       mkdir -p .next
       unzip next.zip -d .next
-      cp -R .next/static/ .next/standalone/.next/server/`
+      cp -R .next/static/ .next/standalone/.next/server/
+
+      
     #  mkdir -p .next/standalone/.next/server/static'
     #  unzip -o next_static.zip .next/standalone/.next/server/static
     # 
