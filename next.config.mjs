@@ -7,14 +7,14 @@ const nextConfig = {
   // },
   output: 'standalone',
   
-  // Disable x-powered-by header for security
-  poweredByHeader: false,
+  // // Disable x-powered-by header for security
+  // poweredByHeader: false,
   
-  // Compression is handled by Azure, disable Next.js compression
-  compress: false,
+  // // Compression is handled by Azure, disable Next.js compression
+  // compress: false,
   
-  // Enable React strict mode for better error catching in development
-  reactStrictMode: true,
+  // // Enable React strict mode for better error catching in development
+  // reactStrictMode: true,
 };
 
 export default nextConfig;
