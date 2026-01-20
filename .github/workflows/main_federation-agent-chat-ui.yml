@@ -75,6 +75,8 @@ jobs:
    - name: Unzip artifact for deployment
      run: |
       mkdir -p .next
+      mkdir node_modules
+      tar -zxf node_modules.tar.gz -C node_modules
       unzip next.zip -d .next
       cp -R .next/static/ .next/standalone/.next/server/
 
