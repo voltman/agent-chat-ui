@@ -43,7 +43,7 @@ jobs:
    - name: Zip nest/standalone folder to artifact for deployment
      run: |
       cd .next
-      zip -r -y ../../next.zip . --symlinks
+      zip -r -y ../next.zip . --symlinks
       cd -
 
   # cd ..
