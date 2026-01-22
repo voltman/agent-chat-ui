@@ -48,7 +48,7 @@ jobs:
       app-name: 'federation-agent-chat-ui'
       slot-name: "Production"
       publish-profile: ${{ secrets.APP_PUBLISH_PROFILE }}
-      package: ./build/standalone
+      package: .next/standalone
 
   #  - name: Zip nest/standalone folder to artifact for deployment
   #    run: |
